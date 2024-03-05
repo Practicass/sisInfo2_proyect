@@ -521,4 +521,115 @@ A continuación, introduce la clave maestra, asegurate de que el formato es zip 
 \paragraph{}
 Cuando termine se habrá descargado en la máquina un zip con la base de datos. Por lo que ahora se podrá distribuir este zip a otra máquina y se podrá importar la base de datos. Para ello, se debe seguir los pasos que se han explicado anteriormente para restaurar una base de datos y seleccionando la carpeta zip que se ha descargado.
 Al acceder a Odoo con esa base de datos se tendrá la misma información que se tenía en la máquina anterior.
+\newpage
+\section{Proyectos}
+\paragraph{}
+Odoo ofrece la posibilidad de administrar los proyectos de nuestra empresa. Para ello, debemos instalar el módulo "Proyectos" en la página de aplicaciones.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{searchProject.png}
+    \caption{Instalación del módulo de proyectos.}
+    \label{fig:installProyectos}
+\end{figure}
+\paragraph{}
+Una vez que hemos instalado podemos abrirlo pulsando en la esquina superior izquierda en el menú de aplicaciones y seleccionando la opción de Proyectos.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{openProject.png}
+    \caption{Abrir del módulo de proyectos.}
+    \label{fig:openProyectos}
+\end{figure}
+\newpage
+\paragraph{}
+Al abrir el módulo de proyectos, se nos mostrará una lista de proyectos que se han creado. Al ser la primera vez que lo abrimos no existe ningun proyecto.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{emptyProject.png}
+    \caption{Página principal del módulo de proyectos.}
+    \label{fig:openProyectos}
+\end{figure}
+ Para crear un nuevo proyecto, pulsa en el botón \textit{New}. Se abrirá un formulario donde se debe introducir la información correspondiente al proyecto que se quiere crear. Una vez introducida la información pulsa en \textit{Create project} y se creará el proyecto.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{addProject.png}
+    \caption{Crear un nuevo proyecto.}
+    \label{fig:openProyectos}
+\end{figure}
+\newpage
+\paragraph{}
+Una vez que hemos creado el primer proyecto, se nos abrirá automáticamente la página de este proyecto. Lo primero que debemos hacer para poder comenzar a gestionar nuestro proyecto es crear las columnas para clasificar nuestras tareas. En este caso hemos decidido dividir en tres estados: Pendiente, En proceso y Hecho. Para crear las columnas hay que pulsar en el botón \textit{+Stage}, introducir el nombre de la columna y pulsar en \textit{Add}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{addColProject.png}
+    \caption{Añadir columnas.}
+    \label{fig:openProyectos}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{colsAddedProject.png}
+    \caption{Columnas añadidas.}
+    \label{fig:openProyectos}
+\end{figure}
+\paragraph{}
+Tras crear las columnas, podemos añadir tareas a nuestro proyecto. Para ello, pulsa en el botón \textit{+}, introduce la información correspondiente a la tarea que se quiere añadir y pulsa en \textit{Add}. Las tareas están formadas por un título, una descripción, si son prioritarias (estrella) y las personas que deben realizarla. Además, se pueden añadir sub-tareas y las tareas que la bloquean.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{itemsAddedProject.png}
+    \caption{Items añadidos.}
+    \label{fig:openProyectos}
+\end{figure}
+\newpage
+\subsection{Asignación de tareas}
+\paragraph{}
+Para asignar una tarea a alguien se puede hacer al crear la tarea o desde la tarea. En ambos casos se debe seleccionar la persona que se quiere que realice la tarea. Por ejemplo, en este caso hemos asignado la tare \textit{Práctica 1A} a Marcus, uno de los integrantes de la empresa y la tarea \textit{Práctica 1B} a James, otro integrante de la empresa.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{assignProject.png}
+    \caption{Asignación tarea.}
+    \label{fig:openProyectos}
+\end{figure}
+\newpage
+\subsection{Sub-tareas}
+\paragraph{}
+Cada tarea puede estar formada por otras tareas más pequeñas. Para añadir una sub-tarea a una tarea, pulsa en la tarea y se abrirá la página de la tarea. Selecciona la opción \textit{Add a sub-task} y añade las correspondientes sub-tareas. En este caso hemos añadido 4 sub-tareas a la tarea \textit{Práctica 1A}, las tareas correspondientes a cada una de las partes de la práctica. Además se pueden marcar como completadas y asignar a una persona.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{subItemsProject.png}
+    \caption{Sub-tareas.}
+    \label{fig:openProyectos}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{completedSubtaskProject.png}
+    \caption{Sub-tareas vista general.}
+    \label{fig:openProyectos}
+\end{figure}
+\subsection{Bloqueo de tareas}
+\paragraph{}
+Por último, se puede bloquear una tarea hasta que otra tarea se haya completado. Para ello es necesario configurar nuestro projecto. Abrimos los ajustes del projecto y activamos la opción \textit{Task Dependencies}. Tras cambiar la configuración pulsa en la tarea que quieres bloquear y selecciona la opción \textit{Block by} y selecciona la tarea que bloquea. En nuestro caso hemos bloqueado la tarea \textit{Práctica 1B} hasta que se complete la tarea \textit{Práctica 1A}. Para saber si hemos bloqueado una tarea, se mostrará un relon de arena en la tarea que está bloqueada.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{settingsProject.png}
+    \caption{Ajustes del proyecto .}
+    \label{fig:openProyectos}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{blockTaskProject.png}
+    \caption{Bloque de tarea.}
+    \label{fig:openProyectos}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{viewBlockProject.png}
+    \caption{Visualizar bloqueo de tarea.}
+    \label{fig:openProyectos}
+\end{figure}
+
+
+
+
+
+
 \end{document} 
