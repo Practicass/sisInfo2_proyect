@@ -258,7 +258,7 @@ Como ya hemos explicado anteriormente, edita y personaliza cada texto y foto par
     \label{fig:faqs}
 \end{figure}
 Finalmente, haz click en guardar en la esquina superior derecha.
-\section{Configuración}
+\section{Configuración funcional}
 \paragraph{}
 A continuación, se va a llevar a cabo la configuración funcional de Odoo. Para ello se va a explicar paso a paso el proceso de creación de una compañía. Primero, se debe ir al menú de configuración dentro de las opciones generales. Se hace click en el link Administrar compañías.
 \newpage
@@ -311,6 +311,7 @@ A continuación, se va a explicar como se pueden crear usuarios para las compañ
 \paragraph{}
 Introduce la información correspondiente al usuario que se quiere crear, también se puede elegir que compañías tiene acceso cada usuario si se hace click en Compañias predeterminadas y Compañía predeterminada y escogiendo la compañía deseada. Una vez realizado pulsa en Save and Close. Si se navega hacia atrás a la página de administración de usuarios se verá que se ha creado un nuevo usuario.
 Si se quiere cambiar el idioma de la compañía, se debe ir al menú de preferencias y seleccionar el idioma deseado en la opción de Languagues.
+\newpage
 \begin{figure}[h]
     \centering
     \includegraphics[width=6cm]{languageUsuario.png}
@@ -333,5 +334,191 @@ Repite este proceso tantas veces como usuarios se quiere crear.
     \caption{Página de usuarios de la compañía.}
     \label{fig:faqs}
 \end{figure}
-
+\paragraph{}
+Una vez añadido usuarios con sus respectivos idiomas, se puede añadir un nuevo idioma a la compañía. Para ello, se debe ir al menú de configuración de la web y selecciona el idioma que se quiere añadir dentro del menú de Información de la web.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{añadirIdiomaWeb.png}
+    \caption{Página para añadir idioma a la web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Además, se pueden añadir distintas funcionalidades de internalización a la web a parte del idioma que se ha explicado anteriormente, como por ejemplo la moneda.
+Para ello se debe ir al menú de administración de las compañías y selecionar la compañía matriz. Una vez dentro haz click en el desplegable de la opción Moneda y selecciona Buscar más. Activa las monedas que se quieren añadir en las compañías ramas de la siguiente manera.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{currencyMatriz.png}
+    \caption{Página para añadir un nuevo tipo de moneda a la compañía matriz.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Ahora navega a la pestaña de ramas de la compañía matriz y selecciona la compañía rama a la que se quiere añadir la moneda y haz click en el desplegable de la opción Moneda y selecciona Buscar más. Selecciona la moneda que se quiere añadir y pulsa en Guardar.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{currency.png}
+    \caption{Página para añadir un nuevo tipo de moneda a las compañías rama.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Para que cada usuario pueda cambiar el idioma de la pagina web se debe asegurar que los idiomas deseados están en el apartado de sitio web de la configuración y si no añadirlo desde ahi. Solo te dejará añadir idiomas que tengan los usuarios de la compañía.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{idiomasCompañia.png}
+    \caption{Página de los idiomas de la web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Ahora el usuario podrá cambiar el idioma desde la web en la parte inferior de esta.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{idiomasWeb.png}
+    \caption{Cambiar idioma en la web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Para añadir a la página web el nombre de la empresa, la dirección, los detalles de contacto y la misión se hace editando la web, añadiendo o editando los bloques que la conforman.
+Primero, debemos ir a la web de la siguiente manera.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{sitioWeb.png}
+    \caption{Entrar en el sitio web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+En este caso la información que queremos añadir se va a ubicar en la parte inferior de la página web, por lo que se editará el contenido del bloque correspondiente. Para ello selecciona la opción Editar que hay en la esquina superior derecha para entrar en modo edición. A continuación, haz doble click encima del bloque e introduce la información correspondiente.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{añadirInfoCompañia.png}
+    \caption{Edición de la información de la compañía en la web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Edita todos los bloques deseados en las demás páginas de la web de la misma manera
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{añadirInfoCompañia2.png}
+    \caption{Edición de la información de la compañía en la web.}
+    \label{fig:faqs}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{añadirInfoCompañia3.png}
+    \caption{Edición de la misión de la compañía en la web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Por otro lado, también se puede cambiar tanto los colores como el tema de la web.
+Para cambiar el tema, se debe estar en el modo edición de la web y en el menú Tema en la barra lateral derecha de la siguiente manera.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{editTema.png}
+    \caption{Personalización del tema de la web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+A continuación, se mostraran los temas disponibles y selecciona el que más se adapte a las necesidades de la compañía.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{elegirTema.png}
+    \caption{Elección del tema de la web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Una vez, elegido el tema se puede personalizar el color de este. Para ello, en la parte superior del botón de cambiar el tema se encuentra las opciones de color. Si se hace click encima de un color se puede cambiar por otro que se eliga, sino se pueden elegir entre unos colores ya predefinidos haciendo click en la paleta de colores.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{cambiarColor.png}
+    \caption{Personalización del color del tema de la web.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Si se quiere añadir el logo a la página web, se debe estar en el modo edición en la pagina web. Haz doble click en el logo predefinido. Selecciona la opción de subir una imagen. A continuación, busca y selecciona la imagen del logo que se encuentra en tu máquina. Te aparecerá entre las imagenes para escoger, haz click en ella para convertirla en tu logo.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{añadirLogo.png}
+    \caption{Personalización del logo.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Para realizar una configuración para mejorar en el ranking de búsqueda de Google, se debe ir al menú de configuración de la web y seleccionar la opción de SEO.
+En este menú se pueden editar el titulo y la descripción que aparecerá desde el buscador de Google y se puede añadir una imagen que se mostrará en el buscador de Google.
+Además, se encuentra la configuración de las palabras clave de Google, que son las palabras que se quieren que se asocien a la web. Para añadir una palabra clave se debe introducir el termino y el idioma de este y hacer click en la opción de Añadir .
+En la lista de la parte inferior aparece información de la palabra, en que tipos de ubicaciones se encuentra en la web y otras palabras relacionadas.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{rankingGoogle.png}
+    \caption{Configuración de optimicaziones SEO.}
+    \label{fig:faqs}
+\end{figure}
+\section{Configuración técnica}
+\paragraph{}
+Odoo ofrece una interfaz para gestionar las bases de datos que se encuentran en la máquina. Para acceder a este menú dirigese al enlace: https://localhost:8069/web/database/manager.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{manageDb.png}
+    \caption{Menú de gestión de bases de datos.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Primero, haz click en Set a master password, introduce la nueva contraseña maestra y pulsa en Continue. 
+Odoo ofrece una opción para crear una nueva base de datos, para ello haz click en Create Database. Introduce la información correspondiente y pulsa en Continue.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{crearDb.png}
+    \caption{Creación de una base de datos.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Una vez creada, inicia sesión con la información introducida anteriormente y se accederá al menú de aplicaciones como se ha explicado en la sección de instalación.
+Odoo ofrece la posibilidad de duplicar una base de datos. Selecciona la opción Duplicate de la base de datos a duplicar. Introduce la información de la siguiente imagen y pulsa en Continue.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{duplicarDb.png}
+    \caption{Duplicación de una base de datos.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Al igual que en la creación de una base de datos, inicia sesión como si fuera la base de datos original.
+\paragraph{}
+Para eliminar una base de datos haz click en la opción de Delete de la base de datos a eliminar. Introduce la contraseña maestra y pulsa en Continue.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{eliminarDb.png}
+    \caption{Borrado de una base de datos.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Por último, Odoo ofrece la posibilidad de restaurar una base de datos. Pulsa en el botón Restore Database. Introduce la contraseña maestra, el nombre de la base de datos y selecciona la carpeta zip que contiene la base de datos a restaurar. Selecciona si es una base de datos copiada o movida si es por otra situación, pulsa en Continue y espera a que se restaure.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{restaurarDb.png}
+    \caption{Restauración de una base de datos.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Para llevar a cabo una transferencia de base de datos de una máquina a otra. Se debe realizar una copia de seguridad de la base de datos que se quiere transferir pulsando en la opción Backup dentro de la base de datos. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{backupDb.png}
+    \caption{Copia de seguridad de una base de datos.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+A continuación, introduce la clave maestra, asegurate de que el formato es zip y pulsa en Continue.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{backupDb2.png}
+    \caption{Copia de seguridad de una base de datos.}
+    \label{fig:faqs}
+\end{figure}
+\paragraph{}
+Cuando termine se habrá descargado en la máquina un zip con la base de datos. Por lo que ahora se podrá distribuir este zip a otra máquina y se podrá importar la base de datos. Para ello, se debe seguir los pasos que se han explicado anteriormente para restaurar una base de datos y seleccionando la carpeta zip que se ha descargado.
+Al acceder a Odoo con esa base de datos se tendrá la misma información que se tenía en la máquina anterior.
 \end{document} 
