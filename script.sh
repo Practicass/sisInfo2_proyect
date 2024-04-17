@@ -23,3 +23,4 @@ find ${BACKUP_DIR} -type f -mtime +7 -name "${ODOO_DATABASE}.*.zip" -delete
 # pull to github
 git add .
 git commit -m "backup $(date +%F)"
+git push
