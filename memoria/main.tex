@@ -1,0 +1,123 @@
+\documentclass[paper=a4wide, fontsize=11pt]{report}	 % A4 paper and 11pt font size
+\usepackage[svgnames]{xcolor} % Using colors
+\usepackage{xurl} %xurl en vez de url para urls largas
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\renewcommand\thechapter{\Roman{chapter}}
+\usepackage[spanish]{babel} % ponerlo en español
+\usepackage{todonotes} % para poner notitas de colores
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+\usepackage[a4paper, left=30mm, right=30mm, top=2.5cm, bottom=2.5cm, footskip=1.2cm]{geometry}  % Changing size of document
+\usepackage{braket}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{nicematrix}
+\usepackage[numbers]{natbib}
+\usepackage{subcaption}
+\usepackage{tabularx, makecell, booktabs}
+\usepackage{textcmds}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{tabularray}
+\usepackage{setspace} % Paquete para ajustar el interlineado
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, % activa el color
+    linkcolor=black, % color de los enlaces internos
+    filecolor=magenta, % color de los enlaces a archivos
+    urlcolor=blue % color de los enlaces URL
+}
+%%%%%% Setting up the style
+
+\pagestyle{fancy} % Enables the custom headers/footers
+
+\lhead{} \rhead{} % Headers - all  empty
+
+
+
+\title{
+{\Huge \textbf{Proyecto: 
+\\ Sistemas de Información 2}}\\
+\vspace{1cm}
+\midrule
+\vspace{1cm}
+\text{Pablo Angusto\quad\href{mailto:842255@unizar.es}{842255@unizar.es}}\\
+\text{Miguel Aréjula\quad\href{mailto:850068@unizar.es}{850068@unizar.es}}\\
+\text{Grupo E}\\
+\includegraphics[width=6cm]{logo.png}\\
+\date{13 de mayo de 2024}\\
+
+
+
+}
+
+
+\cfoot{\color{Black} \thepage}
+
+\renewcommand{\headrulewidth}{0.0pt} % No header rule
+\renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
+\renewcommand{\thesection}{\arabic{section}} % para que los títulos no salgan en 0.1 ...
+
+\setcounter{secnumdepth}{3}
+%%%%%% Starting the document
+\setlength\parindent{0pt} % No indentar los párrafos
+\begin{document}
+\large
+\onehalfspacing
+\maketitle % Print the title
+
+\newpage
+\input{text/resumenEj}
+\newpage
+\tableofcontents
+\newpage
+\thispagestyle{fancy} % Enabling the custom headers/footers for the first page
+
+% In the following lines, add the relevant information
+\vspace{-0.5cm}
+
+%TODO add content
+
+
+
+\input{text/introduccion}
+\input{text/instalacion}
+\newpage
+
+\input{text/configuracion}
+\newpage
+
+\newpage
+\input{text/configTec}
+
+\input{text/gestProy}
+\newpage
+
+\input{text/gestFab}
+\newpage
+
+\input{text/relacion}
+\newpage
+
+\input{text/gestPers}
+\newpage
+
+\input{text/contabilidad}
+\newpage
+
+\input{text/decisiones}
+\newpage
+
+\input{text/gestCon}
+\newpage
+
+\input{text/recomFin}
+\newpage
+
+
+\input{text/biblio}
+\end{document}
+
