@@ -61,15 +61,24 @@ Y con el editor de texto añadimos la siguiente línea:
 Con esta línea indicamos que a la 1:00 de cada día se ejecuta el script que se encuentra en esa dirección, por lo tanto, en caso de cambiar de lugar el script se debería modificar esa línea también.
 
 \subsection{Resultados y análisis}
-Se ha conseguido realizar en Odoo la creación, eliminación, duplicación y copia de seguridad de una base de datos. Además, se ha conseguido transferir una base de datos de una instancia de Odoo a otra, mediante realización de una copia de seguridad de una base de datos y la restauración de la misma. Por último hemos conseguido automatizar esta tarea, creando un script, generando un demonio en nuestra máquina remota y almacenándolas en una lugar físico distinto a la máquina remota. Como lugar de almacenamiento remoto hemos elegido Github, como hemos comentado previamente. Esta decisión se ha basado en la facilidad de subir las copias de seguridad, el control de versiones y que podemos acceder desde cualquier lugar con conexión, ya que el repositorio donde la estamos almacenando es público. El control de versiones nos permite en todo momento acceder a la versión de cualquier día. Si observamos el historial de commits de \href{https://github.com/Practicass/sisInfo2_proyect/commits/main/}{nuestro repositorio} podemos recuperar cualquier copia de seguridad. 
-\newpage
+\paragraph{}
+Se ha conseguido realizar en Odoo la creación, eliminación, duplicación y copia de seguridad de una base de datos. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{fotosConfiguración/bases.png}
+    \caption{Historial de commits del repositorio}
+\end{figure}
+\paragraph{} Además, se ha conseguido transferir una base de datos de una instancia de Odoo a otra, mediante realización de una copia de seguridad de una base de datos y la restauración de la misma. 
+\paragraph{}
+Por último hemos conseguido automatizar esta tarea, creando un script, generando un demonio en nuestra máquina remota y almacenándolas en una lugar físico distinto a la máquina remota. Como lugar de almacenamiento remoto hemos elegido Github, como hemos comentado previamente. Esta decisión se ha basado en la facilidad de subir las copias de seguridad, el control de versiones y que podemos acceder desde cualquier lugar con conexión, ya que el repositorio donde la estamos almacenando es público. El control de versiones nos permite en todo momento acceder a la versión de cualquier día. Si observamos el historial de commits de \href{https://github.com/Practicass/sisInfo2_proyect/commits/main/}{nuestro repositorio} podemos recuperar cualquier copia de seguridad. 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{backup/commits.png}
     \caption{Historial de commits del repositorio}
 \end{figure}
 \subsection{Conclusiones}
-En esta sección hemos analizado como se puede realizar la copia de seguridad de nuestro ERP. Odoo tiene sistema de backup muy sencillo e intitutivo. Que nos permite tener en todo momento nuestra base de datos replicada. Consideramos que es fundamental que estas \textit{backups} no se encuentren en el mismo lugar físico que la base de datos, ya que en caso de una catástrofe como puede ser un incendio de los servidores en los que tenemos nuestra base de datos, en nuestro caso, los servidores de AWS de Estocolmo; perderíamos todo. En cambio, al tener las copias de seguridad en un lugar físico tendríamos la capacidad de recomponer el sistema en minutos.
+\paragraph{}
+En esta sección hemos analizado las herramientas que ofrece Odoo para gestionar las bases de datos. Se ha comprobado cómo se puede realizar la copia de seguridad de nuestro ERP. Odoo tiene sistema de backup muy sencillo e intitutivo. Que nos permite tener en todo momento nuestra base de datos replicada. Consideramos que es fundamental que estas \textit{backups} no se encuentren en el mismo lugar físico que la base de datos, ya que en caso de una catástrofe como puede ser un incendio de los servidores en los que tenemos nuestra base de datos, en nuestro caso, los servidores de AWS de Estocolmo; perderíamos todo. En cambio, al tener las copias de seguridad en un lugar físico tendríamos la capacidad de recomponer el sistema en minutos.
 
 \paragraph{}
 Además tener copias de seguridad no solo nos previene de catástrofes inesperadas, también de nuestros errores. Durante las últimas semanas de elaboración de este análisis cometimos un error que nos causo problemas y no conseguíamos deshacer los pasos que habíamos realizado. Es por ello, que tomamos la decisión de volver a una versión antigua y utilizar una de las copias de seguridad que se habían realizado.
@@ -77,27 +86,44 @@ Además tener copias de seguridad no solo nos previene de catástrofes inesperad
 \section{Configuración técnica - Correo electrónico}
 \label{sec:correo}
 \subsection{Autoevaluación}
-8
+En esta sección se han cumplido los objetivos correspondientes al 10.
 \subsection{Introducción}
+\paragraph{}
 Con el objetivo de permitir la comunicación de la empresa mediante Odoo se ha configurado un servidor de correo electrónico tanto saliente para poder enviar correos como entrante para poder recibirlos.
 \subsection{Metodología}
-Para crear un servidor SMTP y poder enviar correos a través de él, hay que ir a los ajustes de opciones generales, entrar en el menú de Servidores de correo saliente y crear un nuevo servidor. En este caso, se ha utilizado autentificación OAuth de Gmail, hay que asegurarse que se ha introducido \textit{odoo.com} en el campo Filtro DESDE, TLS como encriptación, \textit{smtp.gmail.com} como servidor SMTP y puerto 587. Se ha creado un correo para llevar a cabo la conexión con Gmail por lo que se ha puesto ese correo en el campo de nombre de usuario. A continuación, hay que insertar el ID y el Numero secreto en \textit{Usar un servidor de Gmail} en las opciones generales de los ajustes. Para ello, se ha ido a la siguiente web \href{https://console.cloud.google.com/apis/}{https://console.cloud.google.com/apis/} se ha iniciado sesión en Gmail y se ha creado un nuevo proyecto llamado Odoo. Primero, en pantalla de consentimiento de OAuth se ha elegido el tipo de usuario externo, se han rellenado los formularios necesarios, cabe destacar que hay que añadir como dominio autorizado \textit{odoo.com}. A continuación, se ha ido al menú \textit{Crear credenciales} y se ha seleccionado la opción OAuth client ID. En este menú se ha elegido la opción \textit{Aplicación web} y se ha añadido como URIS de redirección autorizadas \textit{http://ec2-13-51-201-201.eu-north-1.compute.amazonaws.com:8069/google\_gmail/confirm} . En la misma pantalla se mostrará el \textit{ID} y \textit{Secreto} con los que hay que rellenar los campos en Odoo. En la pantalla del servidor de correo que se estaba creando la prueba de conexión será exitosa. Por otro lado, el proceso de añadir un servidor de correo entrante es similar. Cabe destacar que en el campo de nombre del servidor se ha introducido \textit{imap.gmail.com} y se ha activado la opción SSL/TLS. Además, hay que ir a los ajustes de Gmail y habilitar IMAP, desde el apartado \textit{Reenvío e IMAP/POP}. Para llevar a cabo el proceso de envío de un correo electrónico desde Odoo y probar el servidor de salida se ha instalado el módulo Contactos. En este módulo se muestra todos los contactos de empleados, empresas, individuos que se ha tenido. Si se hace click en un contacto, se podrá ver a la derecha un chat en el que se ha escrito un correo y se ha enviado. Además, si se produce una respuesta a ese correo aparecerá en el mismo chat. 
+\paragraph{}
+Para crear un servidor SMTP y poder enviar correos a través de él, hay que ir a los ajustes de opciones generales, entrar en el menú de Servidores de correo saliente y crear un nuevo servidor. En este caso, se ha utilizado autentificación OAuth de Gmail, hay que asegurarse que se ha introducido \textit{odoo.com} en el campo Filtro DESDE, TLS como encriptación, \textit{smtp.gmail.com} como servidor SMTP y puerto 587. Se ha creado un correo para llevar a cabo la conexión con Gmail por lo que se ha puesto ese correo en el campo de nombre de usuario. 
+\paragraph{}
+A continuación, hay que insertar el ID y el Numero secreto en \textit{Usar un servidor de Gmail} en las opciones generales de los ajustes. Para ello, se ha ido a la siguiente web \href{https://console.cloud.google.com/apis/}{https://console.cloud.google.com/apis/} se ha iniciado sesión en Gmail y se ha creado un nuevo proyecto llamado Odoo. Primero, en pantalla de consentimiento de OAuth se ha elegido el tipo de usuario externo, se han rellenado los formularios necesarios, cabe destacar que hay que añadir como dominio autorizado \textit{odoo.com}. A continuación, se ha ido al menú \textit{Crear credenciales} y se ha seleccionado la opción OAuth client ID. En este menú se ha elegido la opción \textit{Aplicación web} y se ha añadido como URIS de redirección autorizadas \textit{http://ec2-13-51-201-201.eu-north-1.compute.amazonaws.com:8069/google\_gmail/confirm} . En la misma pantalla se mostrará el \textit{ID} y \textit{Secreto} con los que hay que rellenar los campos en Odoo. 
+\paragraph{}
+En la pantalla del servidor de correo que se estaba creando la prueba de conexión será exitosa. Por otro lado, el proceso de añadir un servidor de correo entrante es similar. Cabe destacar que en el campo de nombre del servidor se ha introducido \textit{imap.gmail.com} y se ha activado la opción SSL/TLS. Además, hay que ir a los ajustes de Gmail y habilitar IMAP, desde el apartado \textit{Reenvío e IMAP/POP}. 
+\paragraph{}
+Para llevar a cabo el proceso de envío de un correo electrónico desde Odoo y probar el servidor de salida se ha instalado el módulo Contactos. En este módulo se muestra todos los contactos de empleados, empresas, individuos que se ha tenido. Si se hace click en un contacto, se podrá ver a la derecha un chat en el que se ha escrito un correo y se ha enviado. Además, si se produce una respuesta a ese correo aparecerá en el mismo chat. 
 \subsection{Resultados y análisis}
+\paragraph{}
 Se ha conseguido configurar un servidor SMTP mediante Gmail y autentificación OAuth de Gmail. Se ha realizado el envío de un correo electrónico desde Odoo mediante el servidor de correo saliente.
-\newpage
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{fotosConfiguración/correoEnvio1.png}
     \caption{Correo saliente desde bandeja de salida}
     \label{fig:enter-label}
 \end{figure}
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{fotosConfiguración/capturaCorreoMiguel.png}
+    \caption{Correo saliente desde bandeja de salida}
+    \label{fig:enter-label}
+\end{figure}
+\paragraph{}
 Además, se ha comprobado el correcto funcionamiento del servidor de correo entrante como se muestra en la siguiente figura.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\linewidth]{fotosConfiguración/correoOdoo.png}
+    \includegraphics[width=0.8\linewidth]{fotosConfiguración/correoOdoo.png}
     \caption{Conversación de correos desde Odoo}
     \label{fig:enter-label}
 \end{figure}
+\paragraph{}
 Por último, se examinaron las capacidades de automatización de Odoo en relación con la gestión de correos electrónicos. Esta funcionalidad específica de Odoo se encuentra disponible a través del módulo \textit{Studio}, el cual no está habilitado en la versión de Docker de Odoo, sino únicamente en la versión en la nube. Mediante este módulo, es posible establecer reglas que se activan en función de eventos internos del sistema o de los correos electrónicos recibidos por el sistema.
 Cabe destacar qué en el modulo de \textit{Ventas} existe una funcionalidad similar a la del módulo Studio, que permite generar iniciativas a partir de correos pero no cubre los requisitos planteados.
 \subsection{Conclusiones}
