@@ -6,7 +6,7 @@ Hemos desplegado Odoo en una máquina remota en AWS para facilitar la gestión d
 
 [Odoo en AWS](http://ec2-13-51-201-201.eu-north-1.compute.amazonaws.com:8069/en)
 
-La base de datos que hemos utilizado se llama `GOOD`.
+La base de datos que hemos utilizado se llama `GOOD`. Esta esta accesible desde el link anterior y en el repositorio citado en el informe.
 
 ### Credenciales
 
