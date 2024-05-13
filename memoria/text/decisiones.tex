@@ -21,29 +21,29 @@ A continuación, se va a personalizar el módulo de Tableros, para ello se han e
 Para que los usuarios tengan informes de acuerdo con sus funciones se ha añadido el tablero desde la cuenta del propio usuario. En este caso, se ha iniciado sesión en la cuenta de Marcus que es gestor del personal de la compañía. Se ha navegado al módulo de empleados se ha activado la vista de lista y desde el icono de engranaje se ha añadido a \textit{Mis tableros}, además se ha realizado de la misma manera para el módulo de reclutamiento. Desde la cuenta de James que es responsable de ventas se ha ido al módulo de Ventas y se ha añadido como se ha explicado anteriormente la vista de todas las ventas y su estado. 
 \subsection{Resultados y análisis}
 \paragraph{}
-Se ha instalado el módulo de Tableros de Odoo, mediante este módulo se han generado 3 informes para el Administrador. En este caso se han añadido al tablero del Administrador un informe sobre el flujo de ventas, un informe del inventario y otro del historial de ventas. 
+Se ha instalado el módulo de Tableros de Odoo, mediante este módulo se han generado 3 informes para el Administrador. En este caso se han añadido al tablero del Administrador un informe sobre el flujo de ventas, un informe del inventario y otro del historial de ventas, vísible en la figura \ref{admin}. 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{fotosDecisiones/admin.png}
     \caption{Tablero del administrador}
-    \label{fig:enter-label}
+    \label{admin}
 \end{figure}
 \paragraph{}
-Además, se ha personalizado los tableros de dos usuarios, Marcus y James. Marcus es gestor de personal por lo que se le ha asignado un informe de los empleados y del reclutamiento de la empresa, porque son los que necesita un gestor de personal para analizar y ejercer sus responsabilidades, tomar decisiones estratégicas relacionadas con la gestión del talento, la contratación y los empleados, facilitando la optimización de los recursos humanos. 
+Además, se ha personalizado los tableros de dos usuarios, Marcus y James. Marcus es gestor de personal por lo que se le ha asignado un informe de los empleados y del reclutamiento de la empresa, porque son los que necesita un gestor de personal para analizar y ejercer sus responsabilidades, tomar decisiones estratégicas relacionadas con la gestión del talento, la contratación y los empleados, facilitando la optimización de los recursos humanos (ver figura \ref{fig:marcus}). 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\linewidth]{fotosDecisiones/marcus.png}
     \caption{Tablero del gestor de personal Marcus}
-    \label{fig:enter-label}
+    \label{fig:marcus}
 \end{figure}
 \paragraph{}
-Por otro lado, a James se le ha asignado el informe de las ventas, ya que proporciona una visión global del rendimiento de ventas, facilita la identificación de tendencias y contribuye a la optimización de recursos y estrategias de ventas.
+Por otro lado, a James se le ha asignado el informe de las ventas como se puede observar en la figura \ref{fig:james}, ya que proporciona una visión global del rendimiento de ventas, facilita la identificación de tendencias y contribuye a la optimización de recursos y estrategias de ventas.
 \newpage
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{fotosDecisiones/james.png}
     \caption{Tablero del gestor de ventas James}
-    \label{fig:enter-label}
+    \label{fig:james}
 \end{figure}
 \paragraph{}
 Por último, hemos modificado el diagrama BPMN \ref{fab} para representar la interacción entre el módulo de fabricación con este módulo descrito. Este nuevo diagrama es la figura \ref{bi}
@@ -54,6 +54,7 @@ Por último, hemos modificado el diagrama BPMN \ref{fab} para representar la int
     \caption{Diagrama BPMN 2.0 modificado, añadiendo la interacción con el tablero de inventario}
     \label{bi}
 \end{figure}
+\newpage
 \subsection{Conclusiones}
 \paragraph{}
 Se ha logrado integrar la funcionalidad de Business Intelligence en Odoo mediante el módulo de Tableros, lo que permite a cada usuario, aprovechar los datos generados para tomar decisiones mediante la creación de dashboards personalizados. Este módulo es fácil de incorporar en Odoo, sin embargo, hay que destacar que si no se han implementado otros módulos que generen los datos necesarios, los tableros pueden perder gran parte de su valor.

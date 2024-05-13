@@ -8,6 +8,7 @@ Uno de los módulos esenciales para cualquier empresa es el módulo de finanzas 
 \paragraph{}
 La metodología empleada se basa en una revisión exhaustiva de los problemas reportados en el repositorio de Github \href{https://github.com/OCA/l10n-spain/issues}{OCA/l10n-spain issues}, así como en la evaluación de diversas soluciones FICO en la nube. Odoo es un software Open Source, por lo que gran parte de las mejoras son realizadas por la comunidad, como en este caso. Este repositorio es de la comunidad española de Odoo, la cual busca cada día mejorar este ERP. También, se ha realizado un análisis comparativo de las posibles soluciones encontradas; considerando sus características, ventajas y aplicabilidad a las necesidades específicas del mercado español. Por último, se ha investigado como se puede llevar a cabo el proceso de integración entre Odoo y la solución FICO seleccionada, siguiendo pasos técnicos específicos.
 \subsection{Resultados y análisis}
+\paragraph{}
 Tras analizar cual es el problema de este modulo nos hemos dado cuenta que existen varios problemas. El primer gran problema es que el soporte de este módulo en Odoo 17.0 es de pago además de estar incompleto. Otro gran problema es que si queremos utilizar Odoo en castellano muchas de sus funcionalidades no están migradas a este versión, por lo tanto, hay varios módulos que no se han implementado o están en proceso. Si queremos conocer cuales de los módulos son totalmente funcionales en la versión 17.0 podemos revisar el \textit{issue} del repositorio de Github \href{https://github.com/OCA/l10n-spain/issues/3298}{Migration to version 17.0}. Aquí encontraremos la información de los módulos que han sido migrados con éxito, cuales se está trabajando y cuales todavía no se pueden utilizar en castellano en la versión 17.0 de español. Analizando este lista podemos observar que a penas hay once ítems completados, de los 42 que se deben implementar. Otro problema que nos ha llamado la atención es el problema con las subvenciones. Un usuario de la comunidad ha creado un \textit{issue} reportando este problema. Sin embargo, el problema que más no ha llamado la atención es el problema con la \href{https://github.com/OCA/l10n-spain/issues/3527}{Gestión de IRPFs y sus posiciones fiscales}. En este \textit{issue} se describe el problema en la configuración de impuestos en Odoo. Actualmente no se garantiza que los impuestos se apliquen correctamente en función del tipo de entidad; autónomo o empresa, ni en el tipo de transacción, compra o venta.
 
 \paragraph{}
@@ -64,10 +65,8 @@ En la Figura \ref{fico} podemos ver el proceso de integración de forma visual.
 \end{figure}
 
 \subsection{Conclusiones}
-Tras analizar el problema y las posibles soluciones externas podemos concluir:
-\subsection{Conclusiones}
 \paragraph{}
-Basándonos en el análisis detallado realizado, las conclusiones se derivan de los siguientes puntos clave:
+Tras analizar el problema y las posibles soluciones externas podemos concluir:
 
 \begin{enumerate}
     \item \textbf{Problemas Identificados en el Módulo FICO de Odoo:} Tras un análisis exhaustivo, se han identificado varios problemas en el módulo FICO de Odoo, destacando la limitada disponibilidad de soporte para la versión 17.0, la incompletitud de la migración a español, y problemas específicos como la gestión de subvenciones y la configuración de impuestos, particularmente el IRPF. Estos problemas impactan la funcionalidad y la confiabilidad del módulo para usuarios en el contexto español.
